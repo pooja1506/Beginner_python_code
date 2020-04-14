@@ -10,4 +10,3 @@ print(reverse("cat"))  # prints "tac"
 print(reverse("programming"))  # prints "gnimmargorp" 
 print(reverse("bootcamp"))   # prints "pmactoob" 
 print(reverse("noon"))  # print "noon"
-

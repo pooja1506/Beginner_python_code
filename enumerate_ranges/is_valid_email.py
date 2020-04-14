@@ -3,29 +3,36 @@
 # - contains exactly one @ symbol
 # - contains only lowercase alphabetic letters before the @
 # - contains exactly one . after the @
+
+
 def is_valid_email(str):
     split_at_rate = str.split("@")
-    a = split_at_rate[0]
-    b = split_at_rate[1]
+    # here, u r splitting on "@" and then checcking the length
+    # but if the statement does not have "@" only, then it went out of range, because u had written that split the sentence and then store it in a & b. but since there was no "@", it couldn't be stored.
+    # that is why, I checked first if it has @ or not and then store it into a and b
     if len(split_at_rate) != 2:
         return False
 
-    else:
-        alphabets = "abcdefghijklmnopqrstuvwxyz"
-        for character in a:
-            if not (character in alphabets):
-                return False
+
+    a = split_at_rate[0]
+    b = split_at_rate[1]
+    alphabets = "abcdefghijklmnopqrstuvwxyz"
+
+
+    for character in a:
+        if character not in alphabets:
+            return False
 
     split_b = b.split(".")
-    if len(split_b)!=2:
+    if len(split_b) != 2:
         return False
     else:
         return True
-    
-    
+
+
 print(is_valid_email("abc@xy.z"))         # => true
 print(is_valid_email("jdoe@gmail.com"))   # => true
 print(is_valid_email("jdoe@g@mail.com"))  # => false
-print(is_valid_email("jdoe42@gmail.com")) # => false
-#print(is_valid_email("jdoegmail.com"))    # => false
+print(is_valid_email("jdoe42@gmail.com"))  # => false
+print(is_valid_email("jdoegmail.com"))    # => false ---err
 print(is_valid_email("az@email"))         # => false

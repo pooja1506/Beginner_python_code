@@ -25,3 +25,4 @@ def sentence(each_word):
 
 print(abbreviate_sentence("follow the yellow brick road")) # => "fllw the yllw brck road"
 print(abbreviate_sentence("what a wonderful life"))  # => "what a wndrfl life"
+
