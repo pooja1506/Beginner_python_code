@@ -4,15 +4,28 @@
 # - contains only lowercase alphabetic letters before the @
 # - contains exactly one . after the @
 def is_valid_email(str):
-    for i in range(len(str)):
-        #print(i)
-        if str[i] == str[i].lower():
-            return True
+    split_at_rate = str.split("@")
+    a = split_at_rate[0]
+    b = split_at_rate[1]
+    if len(split_at_rate) != 2:
+        return False
 
+    else:
+        alphabets = "abcdefghijklmnopqrstuvwxyz"
+        for character in a:
+            if not (character in alphabets):
+                return False
 
+    split_b = b.split(".")
+    if len(split_b)!=2:
+        return False
+    else:
+        return True
+    
+    
 print(is_valid_email("abc@xy.z"))         # => true
-#print(is_valid_email("jdoe@gmail.com"))   # => true
-#print(is_valid_email("jdoe@g@mail.com"))  # => false
-#print(is_valid_email("jdoe42@gmail.com")) # => false
+print(is_valid_email("jdoe@gmail.com"))   # => true
+print(is_valid_email("jdoe@g@mail.com"))  # => false
+print(is_valid_email("jdoe42@gmail.com")) # => false
 #print(is_valid_email("jdoegmail.com"))    # => false
-#print(is_valid_email("az@email"))         # => false
+print(is_valid_email("az@email"))         # => false
