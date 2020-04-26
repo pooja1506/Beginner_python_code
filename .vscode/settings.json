@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "E:\\Softwares\\AnacondaFolder\\envs\\automatestuff\\python.exe"
+    "python.pythonPath": "E:\\Softwares\\AnacondaFolder\\envs\\automatestuff\\python.exe",
+    "editor.fontSize": 16,
+    "editor.wordWrap": "on"
 }
