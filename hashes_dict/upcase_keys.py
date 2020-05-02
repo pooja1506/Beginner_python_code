@@ -12,4 +12,4 @@ def select_upcase_keys(hash_in):
 print(select_upcase_keys( {"make": "Tesla", "MODEL": "S", "Year": 2018, "SEATS": 4}))
 
  # => {"DATE": "July 4th"} 
-#print(select_upcase_keys( {"DATE": "July 4th", "holiday": "Independence Day", "type": "Federal"}))
+print(select_upcase_keys( {"DATE": "July 4th", "holiday": "Independence Day", "type": "Federal"}))
